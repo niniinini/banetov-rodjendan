@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srećaaannn 20. rođendaaaannnn macoo!!!!! 🐱😼❤️</title>
+    <style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+     }
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(
+              135deg,
+              #ffc6d9,
+              #e6c9ff,
+              #ffd9e8
+      );
+    }
+
+      .hearts{
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          overflow: hidden;
+    }
+
+      .heart{
+          position: absolute;
+          bottom: -50px;
+          color: white;
+          font-size: 25px;
+          animation: float 7s linear infinite;
+          opacity: 0.8;
+}
+
+      .heart:nth-child(1) { left: 10%;
+animation-delay: 0s;}
+      .heart:nth-child(2) { left: 30%;
+animation-delay: 2s;}
+      .heart:nth-child(3) { left: 55%;
+animation-delay: 1s;}
+      .heart:nth-child(4) { left: 75%;
+animation-delay: 3s;}
+      .heart:nth-child(5) { left: 90%;
+animation-delay: 1.5s;}
+
+     @keyframes float{
+       0% {
+         transform: translateY(0)
+rotate(0deg);
+         opacity: 0;
+       }
+       20%{ opacity:0.8;}
+       100%{
+         transform: translateY(-110vh)
+rotate(35deg);
+         opacity:0;
+       }
+     }
+
+     .card{
+       position: relative;
+       z-index: 1;
+       width: 90%;
+       max-width: 600px;
+       padding: 45px 20px;
+       text-align: center;
+       background: rgba(255,255,255,0.65);
+       border: 2px solid white;
+       border-radius: 30px;
+       box-shadow: 0 15px 40px
+#b76ca633;
+     }
+
+     h1{
+       color:#c04480;
+       font-size:clamp(28px, 6vw, 42px);
+       margin-bottom: 15px;
+     }
+     
+     .message {
+       color:#89517b;
+       font-size: 18px;
+       line-height: 1.6;
+     }
+
+
+     .cats{
+       display: flex;
+       justify-content: center;
+       gap: 45px;
+       margin: 35px 0;
+     }
+
+
+     .cat{
+       font-size: 75px;
+       display: inline-block;
+       animation: jump 0.8s ease-in-out infinite alternate;
+     }
+
+    
+     .cat:nth-child(2) {
+       animation-delay: 0.4s;
+     }
+
+     @keyframes jump {
+       from{
+         transform: translateY(0)
+rotate(-8deg);
+           }
+     to{
+       transform:translateY(-28px)
+rotate(8deg);
+       }
+
+     }
+
+
+     button {
+       background:#f28bb8;
+       color:white;
+       border:none;
+       border-radius: 25px;
+       padding: 14px 25px;
+       font-size: 16px;
+       cursor: pointer;
+       transition: 0.3;
+     }
+    
+     button:hover {
+       background:#d95b98;
+       transform:scale(1.08);
+     }
+
+     #surprise {
+       margin-top: 20px;
+       color:#bd397c;
+       font-size: 19px;
+       font-weight:bold;
+       line-height: 1.6;
+     }
+
+     @media(max-width: 400px) {
+      .card { padding: 30px 15px;}
+      .cat { font-size: 60px;}
+      .cats { gap: 25px;}
+     }
+
+#lockScreen {
+   position: fixed;
+   inset: 0;
+   z-index: 9999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   background: linear-gradient(135deg,
+#c7b2ff,#ffc8e3,#ffe7bd);
+}
+
+.lock-card {
+   width: 100%;
+   max-width: 430px;
+   padding: 30px 20px;
+   text-align: center;
+   background: #fff7ed;
+   border: 4px solid white;
+   outline: 4px solid #9877db;
+   box-shadow: 8px 8px 0 #785a9b;
+}
+
+.lock-cat {
+   font-size: 48px;
+   animation: cat-jump .75s steps(2,end)
+infinite alternate;
+}
+
+.lock-card h1 {
+   color: #d94f91;
+   font-size: 27px;
+}
+
+.lock-card input {
+   width: 100%;
+   padding: 13px;
+   margin: 10px 0;
+   border: 3px solid #d5b9f4;
+   background: white;
+}
+
+.lock-card button {
+   padding: 13px;
+   color: white;
+   background: #df75aa;
+   border: 0;
+   border-bottom: 4px solid #a7467d;
+   cursor: pointer;
+}
+
+#errorMessage {
+   color: #d94f91;
+   font-weight: bold;
+   font-size: 12px;
+}
+
+   </style>
+</head>
+
+<body>
+  <div id="lockScreen">
+   <div class="lock-card">
+     <div class="lock-cat">😽❤️😽</div>
+
+     <h1>Zdravo macoo🥳</h1>
+
+     <p>
+       Da bi video iznenadjenje moraš proći, bez tajne šifre nećeš moći...
+     </p>
+
+     <p>Unesi tajnu lozinku.💌</p>
+
+     <input
+       id="secretCode"
+       type="password"
+       placeholder="Koja je lozinka..."
+     >
+
+     <button onclick="unlockSite()">
+       OTKLJUČAJ IZNENAĐENJE!!!
+     </button>
+
+    
+
+     <p id="errorMessage"></p>
+   </div>
+ </div>
+
+
+
+   <div class="hearts">
+     <span class="heart">💝</span>
+     <span class="heart">❤️</span>
+     <span class="heart">💝</span>
+     <span class="heart">💕</span>
+     <span class="heart">💝</span>
+   </div>
+
+   <main class="card">
+     <h1>🎂Srećaaaannn 20. rođendannn macooo!!!!!🎂</h1>
+
+     <p class="message">
+       Srećan rođendan moj mau!
+<br>
+       Želim ti da svaki dan provodiš sa mnom do kraja života, <br>
+       zato što smo mi male mace koje se vole.😼😽🐈
+     </p>
+
+     <div class="cats">
+       <span class="cat">😽</span>
+       <span class="cat">😼</span>
+     </div>
+
+
+     <p class="message">
+       Ovo smo ti i ja:
+     </p>
+
+     <br>
+ 
+
+     <button onclick="showSurprise()">
+       Klikni za surprise💌
+     </button>
+
+     
+     <p id="surprise"></p>
+   </main>
+
+
+   <script>
+     function showSurprise(){
+
+document.getElementById("surprise").innerHTML =
+                "💝Ti si moja guza!" + 
+                " Volllliiimmm teeee❤️❤️❤️";
+   }
+
+function unlockSite() {
+  const password = document.getElementById("secretCode").value;
+
+
+  if (password ==="volimte"){
+
+document.getElementById("lockScreen").style.display = "none";
+  } else {
+
+document.getElementById("errorMessage").textContent = 
+  "Nije ta lozinka!!! Probaj ponovo, imaš samo 3 pokušaja!";
+
+  }
+}
+
+
+
+   </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
